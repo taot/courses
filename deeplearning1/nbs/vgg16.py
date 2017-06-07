@@ -132,7 +132,8 @@ class Vgg16():
         model.add(Dense(1000, activation='softmax'))
 
         fname = 'vgg16.h5'
-        model.load_weights(get_file(fname, self.FILE_PATH+fname, cache_subdir='models'))
+        # model.load_weights(get_file(fname, self.FILE_PATH+fname, cache_subdir='models'))
+        model.load_weights('../../homework/models/vgg16.h5')
 
 
     def get_batches(self, path, gen=image.ImageDataGenerator(), shuffle=True, batch_size=8, class_mode='categorical'):
