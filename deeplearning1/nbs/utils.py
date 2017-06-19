@@ -79,6 +79,8 @@ def ceil(x):
     return int(math.ceil(x))
 
 def plots(ims, figsize=(12,6), rows=1, interp=False, titles=None):
+    if len(ims) <= 0:
+        return
     if type(ims[0]) is np.ndarray:
         ims = np.array(ims).astype(np.uint8)
         if (ims.shape[-1] != 3):
